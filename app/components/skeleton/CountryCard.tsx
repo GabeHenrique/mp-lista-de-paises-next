@@ -1,8 +1,3 @@
-type CountryCardProps = {
-  name: string,
-  flag: string
-}
-
 export default function CountryCardSkeleton() {
   return (
     <div className='bg-white shadow-lg rounded-lg p-4'>

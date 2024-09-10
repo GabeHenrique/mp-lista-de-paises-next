@@ -1,6 +1,5 @@
 import Link from "next/link";
 import {CountryResume} from "@/app/controller/apisController";
-import {useState} from "react";
 
 type CountryCardProps = {
   country: CountryResume;

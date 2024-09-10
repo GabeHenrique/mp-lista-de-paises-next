@@ -89,7 +89,7 @@ export default function HomePage() {
           </>
         ) : (
           <div className="w-full flex flex-wrap">
-            {Array(3).fill().map((_, index) => (
+            {Array(3).fill(null).map((_, index) => (
               <div key={index} className="w-1/3 animate-pulse p-4">
                 <CountryCardSkeleton/>
               </div>

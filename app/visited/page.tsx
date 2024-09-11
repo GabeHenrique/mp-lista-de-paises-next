@@ -22,7 +22,7 @@ return (
     <h1 className='mx-20 mt-10 text-4xl'>Países visitados por mim</h1>
     <div className="w-full flex flex-wrap">
       {visitedCountries.map((country) => (
-        <div key={country.name.common} className="w-1/3 p-4">
+        <div key={country.name.common} className="w-full sm:w-1/2 md:w-1/3 p-4">
           <CountryCard country={country}/>
         </div>
       ))}

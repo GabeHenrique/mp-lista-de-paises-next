@@ -11,17 +11,6 @@
   --dark-salmon: #fd4c00;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #eaeaea;
-    --forest-green: #004c46;
-    --light-green: #206a66;
-    --salmon: #fd8451;
-    --dark-salmon: #fd4c00;
-  }
-}
-
 body {
   color: var(--foreground);
   background: var(--background);

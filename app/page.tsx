@@ -68,17 +68,17 @@ export default function HomePage() {
             className='object-cover rounded-2xl'
           />
         </div>
-        <h1 className='mx-20 mt-10 text-3xl text-center'>Comece aqui a sua busca pelos incríveis países do mundo</h1>
-        <Search onSearch={onSearch}></Search> {/* Atualize a busca ao digitar */}
+        <h1 className='mx-20 mt-10 text-lg md:text-3xl text-center'>Comece aqui a sua busca pelos incríveis países do mundo</h1>
+        <Search onSearch={onSearch}/>
       </div>
       <div className="flex flex-col text-center text-2xl mt-16">
         {!loading ? (
           <>
-            {!error && (<h1 className='text-4xl mb-5'>Alguns dos nossos países mais visitados</h1>)}
+            {!error && (<h1 className='text-2xl md:text-4xl mb-5'>Alguns dos nossos países mais visitados</h1>)}
             <div className="w-full flex flex-wrap">
               {countries.length > 0 ? (
                 countries.map((country) => (
-                  <div key={country.name.common} className="w-1/3 p-4">
+                  <div key={country.name.common} className="w-full sm:w-1/2 md:w-1/3 p-4">
                     <CountryCard country={country}/>
                   </div>
                 ))
@@ -90,7 +90,7 @@ export default function HomePage() {
         ) : (
           <div className="w-full flex flex-wrap">
             {Array(3).fill(null).map((_, index) => (
-              <div key={index} className="w-1/3 animate-pulse p-4">
+              <div key={index} className="w-full sm:w-1/2 md:w-1/3 p-4">
                 <CountryCardSkeleton/>
               </div>
             ))}

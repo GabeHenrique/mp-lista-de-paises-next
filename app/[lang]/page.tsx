@@ -65,7 +65,10 @@ export default function SameLanguagePage() {
           <div className="w-full flex flex-wrap">
             {countries.length > 0 ? (
               countries.map((country) => (
-                <div key={country.name.common} className="w-1/3 p-4">
+                <div
+                  key={country.name.common}
+                  className="w-full sm:w-1/2 md:w-1/3 p-4"
+                >
                   <CountryCard country={country}/>
                 </div>
               ))
@@ -77,7 +80,7 @@ export default function SameLanguagePage() {
       ) : (
         <div className="w-full flex flex-wrap">
           {Array(9).fill(null).map((_, index) => (
-            <div key={index} className="w-1/3 animate-pulse p-4">
+            <div key={index} className="w-full sm:w-1/2 md:w-1/3 p-4">
               <CountryCardSkeleton/>
             </div>
           ))}

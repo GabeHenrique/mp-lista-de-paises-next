@@ -3,7 +3,7 @@ export type Country = {
     common: string;
     official: string;
   };
-  capital: string;
+  capital: string[];
   continents: string;
   languages: {
     [key: string]: string;

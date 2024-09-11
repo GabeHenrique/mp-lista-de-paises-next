@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="py-4 bg-white">
+    <header className="py-4 bg-white px-5">
       <Container className='flex'>
         <Link href='/'>
           <Image src='/assets/Logo.png' alt="Logo com formato do globo terrestre" width={30} height={30}

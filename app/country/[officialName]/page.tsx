@@ -107,30 +107,30 @@ export default function CountryPage() {
           className={`px-2 py-1 m-2 rounded-xl focus:outline-none transition-all duration-300 ${
             isVisited
               ? 'bg-salmon text-white hover:bg-darksalmon'
-              :  'bg-lightgreen text-white hover:bg-forestgreen'
+              : 'bg-lightgreen text-white hover:bg-forestgreen'
           }`}
         >
           {isVisited ? 'Remover Visitado' : 'Marcar como Visitado'}
         </button>
       </div>
-      <div className='flex items-center w-full h-80 bg-white pt-6 pb-6 px-5 rounded-2xl'>
-        <div className='w-1/2 h-5/6 pl-5'>
-          <h1 className='flex items-center p-2 text-xl'>
+      <div className='flex flex-col md:flex-row items-center w-full h-auto md:h-80 bg-white pt-6 pb-6 px-5 rounded-2xl'>
+        <div className='w-full md:w-1/2 h-auto md:h-5/6 pl-5'>
+          <h1 className='flex items-center p-2 text-lg md:text-xl'>
             <FaCity/>
             <strong className='ml-2'>Capital:</strong>
-            <p className='ml-2'> {country.capital}</p>
+            <p className='ml-2'> {country.capital.join(', ')}</p>
           </h1>
-          <div className='flex items-center p-2 text-xl'>
+          <div className='flex items-center p-2 text-lg md:text-xl'>
             <FaMapMarkedAlt/>
             <strong className='ml-2'>Continente:</strong>
             <p className='ml-2'> {country.continents}</p>
           </div>
-          <div className='flex items-center p-2 text-xl'>
+          <div className='flex items-center p-2 text-lg md:text-xl'>
             <FaPeopleGroup/>
             <strong className='ml-2'>População:</strong>
             <p className='ml-2'> {country.population}</p>
           </div>
-          <div className='flex flex-col p-2 text-xl'>
+          <div className='flex flex-col p-2 text-lg md:text-xl'>
             <div className='flex items-center'>
               <FaLanguage/>
               <strong className='ml-2'>Idiomas:</strong>
@@ -145,18 +145,18 @@ export default function CountryPage() {
               ))}
             </div>
           </div>
-
         </div>
-        <div className='w-1/2 h-5/6 flex justify-center items-start'>
+        <div className='w-full md:w-1/2 h-60 md:h-5/6 flex justify-center items-start mt-4 md:mt-0'>
           <img className='h-full object-cover rounded-lg border' src={country.flags.svg} alt={country.name.official}/>
         </div>
       </div>
+
       {frontierCountries.length > 0 ? (
         <div className='flex flex-col text-center'>
           <h1 className='mx-20 mt-10 text-4xl'>Países que fazem fronteira</h1>
           <div className="w-full flex flex-wrap">
             {frontierCountries.map((country) => (
-              <div key={country.name.common} className="w-1/3 p-4">
+              <div key={country.name.common} className="w-full sm:w-1/2 md:w-1/3 p-4">
                 <CountryCard country={country}/>
               </div>
             ))}

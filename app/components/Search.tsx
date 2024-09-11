@@ -4,7 +4,7 @@ export default function Search({onSearch}: { onSearch: (query: string) => void }
   const [query, setQuery] = useState('');
 
   const handleSearch = () => {
-    onSearch(query); // Passa o valor da busca para o pai
+    onSearch(query);
   };
 
   const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
@@ -14,7 +14,7 @@ export default function Search({onSearch}: { onSearch: (query: string) => void }
   };
 
   return (
-    <div className="flex items-center w-full mt-10">
+    <div className="flex items-center w-full mt-10 px-5 md:px-0">
       <input
         type="text"
         value={query}

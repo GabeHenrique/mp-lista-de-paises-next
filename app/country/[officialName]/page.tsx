@@ -58,8 +58,6 @@ export default function CountryPage() {
     if (country) {
       const countryExists = visitedCountries.some(
         (visitedCountry) => {
-          console.log(visitedCountries);
-          console.log(country);
           return visitedCountry.name.official === country.name.official
         }
       );
